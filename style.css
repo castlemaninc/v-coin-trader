@@ -17,7 +17,8 @@ nav {
 
 .toggle {
 	display: flex;
-	width: 100%;	
+	width: 60%;
+	margin: 1em;	
 }
 
 .gold-button {
@@ -40,9 +41,11 @@ section {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 }
 
 .coin-container {
+	width: 60%;
 	display: flex;	
 	justify-content: center;
 		
@@ -53,4 +56,9 @@ section {
 	margin: 1em;
 	border: 1px solid black;
 	border-radius: .285rem;
+}
+
+.coin-card img {
+	max-width: 100%;
+    height: auto;
 }
