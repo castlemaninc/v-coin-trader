@@ -1,0 +1,16 @@
+* {
+	font-family: 'Helvetica', 'Arial';
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background:#1b1c1d;
+	color: white;
+	padding: 12px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
