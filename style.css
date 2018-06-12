@@ -11,14 +11,13 @@ nav {
 	background:#1b1c1d;
 	color: white;
 	padding: 12px;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 40px;
+	padding-right: 40px;
 }
 
 .toggle {
 	display: flex;
-	width: 60%;
-	margin: 1em;	
+	margin-top: 1em;	
 }
 
 .gold-button {
@@ -44,11 +43,10 @@ section {
 	align-items: center;
 }
 
-.coin-container {
-	width: 60%;
-	display: flex;	
-	justify-content: center;
-		
+.coin-container {	
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;		
 }
 
 .coin-card {
@@ -59,6 +57,44 @@ section {
 }
 
 .coin-card img {
-	max-width: 100%;
+	max-width: 220px;
     height: auto;
+}
+
+.item-description {
+	display: flex;
+	flex-direction: column;
+	margin: 5%;
+}
+
+.item-name, .item-price {
+	margin-top: 5%;	
+}
+
+.item-price {
+	color: #aaa;
+}
+
+.add-items {
+	display: flex;	
+	margin: 5% 0;
+	height: 40px;	
+}
+
+input[type=number]{
+    width: 45px;
+    font-size: 1em;    
+} 
+
+.add-to-cart {
+	display: flex;
+	font-size: .8em;
+	line-height: .8em;
+	font-weight: bold;
+	color: white;
+	
+	align-items: center;
+	justify-content: center;		
+	background-color: dodgerblue;
+	padding: 5px 20px 5px 20px;	
 }
