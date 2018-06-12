@@ -17,7 +17,7 @@
 		<div>
 			GOLD: ${{ goldSpot }} Change: {{percentageChange }}%
 		</div>
-		<div>Cart({{ itemsInCart }})</div>
+		<div><p>Cart({{ cart }})</p></div>
 	</nav>
 	<section>
 	<div class="toggle">
@@ -33,10 +33,10 @@
 				<h4 class="item-weight">{{ products[4].weight }}</h4>
 				<small class="item-purity">{{ products[4].purity }}</small>
 				<h1 class="item-price">${{silverSpot + products[4].markup }}</h1>
-				<div class="add-items">
-					<input type="number" size="2" placeholder="0" class="item-number">
-					<div class="add-to-cart">Add to Cart</div>
-				</div>
+				<form class="add-items">
+					<input type="number" min="0" size="2" placeholder="0" class="item-number" v-model="numItems">
+					<div class="add-to-cart" v-on:click='addToCart'>Add to Cart</div>
+				</form>
 			</div>
 		</div>		
 		

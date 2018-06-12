@@ -3,7 +3,8 @@ new Vue({
 	data: {
 		goldSpot: 1334.20,
 		silverSpot: 16.57,
-		itemsInCart: 0,
+		cart: 0,
+		numItems: 0,
 		percentageChange: 1.34,
 		metalType: 'gold',		
 		products : [
@@ -80,5 +81,12 @@ new Vue({
 				numOfEachProduct: 0
 			}
 		]
+	},
+
+	methods: {
+		addToCart() {
+			this.cart += parseInt(this.numItems);
+			this.numItems = 0; 
+		}
 	}
 })
