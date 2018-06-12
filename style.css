@@ -43,13 +43,13 @@ section {
 	align-items: center;
 }
 
-.coin-container {	
+.item-container {	
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;		
 }
 
-.coin-card {	
+.item-card {	
 	min-width: 220px;
 	margin: 1em;
 	border: 1px solid black;
@@ -60,7 +60,7 @@ section {
 	max-width: 220px;
 }
 
-.coin-card img {
+.item-photo {
 	max-width: 220px;
     height: auto;
 }
