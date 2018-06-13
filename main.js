@@ -87,6 +87,16 @@ new Vue({
 		addToCart() {
 			this.cart += parseInt(this.numItems);
 			this.numItems = 0; 
+		},
+
+		selectGold() {
+			this.metalType = 'gold';
+			console.log(this.metalType + ' is selected');
+		},
+
+		selectSilver() {
+			this.metalType = 'silver';
+			console.log(this.metalType + ' is selected');
 		}
 	}
 })

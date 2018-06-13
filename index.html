@@ -14,20 +14,35 @@
 <div id="app">
 
 	<nav>
-		<div>
+		<div v-if="metalType === 'gold'">
 			GOLD: ${{ goldSpot.toFixed(2) }} Change: {{percentageChange }}%
+		</div>
+		<div v-if="metalType === 'silver'">
+			SILVER: ${{ silverSpot.toFixed(2) }} Change: {{percentageChange }}%
 		</div>
 		<div><p>Cart({{ cart }})</p></div>
 	</nav>
 	<section>
 	<div class="toggle">
-		<div class="gold-button">Buy Gold</div>
-		<div class="silver-button">Buy Silver</div>
+		<div class="gold-button button" v-on:click='selectGold'>Buy Gold</div>
+		<div class="silver-button button" v-on:click='selectSilver'>Buy Silver</div>
 	</div>
 	<div class="item-container">
-
-		<div class="item-card">
-			<img src='./assets/2018-1-oz-american-silver-eagle_360.png' alt="" class="item-photo">
+		<div class="item-card" v-if="metalType === 'gold'">
+			<img :src="products[3].image" alt="" class="item-photo">
+			<div class="item-description">
+				<h3 class="item-name">{{ products[3].name }}</h3>
+				<h4 class="item-weight">{{ products[3].weight }}</h4>
+				<small class="item-purity">{{ products[3].purity }}</small>
+				<h1 class="item-price">${{(goldSpot + products[3].markup).toFixed(2) }}</h1>
+				<form class="add-items">
+					<input type="number" min="0" size="2" placeholder="0" class="item-number" v-model="numItems">
+					<div class="add-to-cart button" v-on:click='addToCart'>Add to Cart</div>
+				</form>
+			</div>
+		</div>
+		<div class="item-card" v-if="metalType === 'silver'">
+			<img :src="products[4].image" alt="" class="item-photo">
 			<div class="item-description">
 				<h3 class="item-name">{{ products[4].name }}</h3>
 				<h4 class="item-weight">{{ products[4].weight }}</h4>
@@ -35,11 +50,49 @@
 				<h1 class="item-price">${{(silverSpot + products[4].markup).toFixed(2) }}</h1>
 				<form class="add-items">
 					<input type="number" min="0" size="2" placeholder="0" class="item-number" v-model="numItems">
-					<div class="add-to-cart" v-on:click='addToCart'>Add to Cart</div>
+					<div class="add-to-cart button" v-on:click='addToCart'>Add to Cart</div>
 				</form>
 			</div>
 		</div>		
-		
+		<div class="item-card" v-if="metalType === 'silver'">
+			<img :src="products[5].image" alt="" class="item-photo">
+			<div class="item-description">
+				<h3 class="item-name">{{ products[5].name }}</h3>
+				<h4 class="item-weight">{{ products[5].weight }}</h4>
+				<small class="item-purity">{{ products[5].purity }}</small>
+				<h1 class="item-price">${{(silverSpot + products[5].markup).toFixed(2) }}</h1>
+				<form class="add-items">
+					<input type="number" min="0" size="2" placeholder="0" class="item-number" v-model="numItems">
+					<div class="add-to-cart button" v-on:click='addToCart'>Add to Cart</div>
+				</form>
+			</div>
+		</div>
+		<div class="item-card" v-if="metalType === 'silver'">
+			<img :src="products[6].image" alt="" class="item-photo">
+			<div class="item-description">
+				<h3 class="item-name">{{ products[6].name }}</h3>
+				<h4 class="item-weight">{{ products[6].weight }}</h4>
+				<small class="item-purity">{{ products[6].purity }}</small>
+				<h1 class="item-price">${{(silverSpot + products[6].markup).toFixed(2) }}</h1>
+				<form class="add-items">
+					<input type="number" min="0" size="2" placeholder="0" class="item-number" v-model="numItems">
+					<div class="add-to-cart button" v-on:click='addToCart'>Add to Cart</div>
+				</form>
+			</div>
+		</div>
+		<div class="item-card" v-if="metalType === 'silver'">
+			<img :src="products[7].image" class="item-photo">
+			<div class="item-description">
+				<h3 class="item-name">{{ products[7].name }}</h3>
+				<h4 class="item-weight">{{ products[7].weight }}</h4>
+				<small class="item-purity">{{ products[7].purity }}</small>
+				<h1 class="item-price">${{(silverSpot + products[7].markup).toFixed(2) }}</h1>
+				<form class="add-items">
+					<input type="number" min="0" size="2" placeholder="0" class="item-number" v-model="numItems">
+					<div class="add-to-cart button" v-on:click='addToCart'>Add to Cart</div>
+				</form>
+			</div>
+		</div>
 	</div>	
 	</section>	
 </div>
