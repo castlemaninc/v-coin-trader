@@ -29,6 +29,45 @@
 	</div>
 	<div class="item-container">
 		<div class="item-card" v-if="metalType === 'gold'">
+			<img :src="products[1].image" alt="" class="item-photo">
+			<div class="item-description">
+				<h3 class="item-name">{{ products[0].name }}</h3>
+				<h4 class="item-weight">{{ products[0].weight }}</h4>
+				<small class="item-purity">{{ products[0].purity }}</small>
+				<h1 class="item-price">${{(goldSpot + products[0].markup).toFixed(2) }}</h1>
+				<form class="add-items">
+					<input type="number" min="0" size="2" placeholder="0" class="item-number" v-model="numItems">
+					<div class="add-to-cart button" v-on:click='addToCart'>Add to Cart</div>
+				</form>
+			</div>
+		</div>
+		<div class="item-card" v-if="metalType === 'gold'">
+			<img :src="products[1].image" alt="" class="item-photo">
+			<div class="item-description">
+				<h3 class="item-name">{{ products[1].name }}</h3>
+				<h4 class="item-weight">{{ products[1].weight }}</h4>
+				<small class="item-purity">{{ products[1].purity }}</small>
+				<h1 class="item-price">${{(goldSpot + products[1].markup).toFixed(2) }}</h1>
+				<form class="add-items">
+					<input type="number" min="0" size="2" placeholder="0" class="item-number" v-model="numItems">
+					<div class="add-to-cart button" v-on:click='addToCart'>Add to Cart</div>
+				</form>
+			</div>
+		</div>
+		<div class="item-card" v-if="metalType === 'gold'">
+			<img :src="products[2].image" alt="" class="item-photo">
+			<div class="item-description">
+				<h3 class="item-name">{{ products[2].name }}</h3>
+				<h4 class="item-weight">{{ products[2].weight }}</h4>
+				<small class="item-purity">{{ products[2].purity }}</small>
+				<h1 class="item-price">${{(goldSpot + products[2].markup).toFixed(2) }}</h1>
+				<form class="add-items">
+					<input type="number" min="0" size="2" placeholder="0" class="item-number" v-model="numItems">
+					<div class="add-to-cart button" v-on:click='addToCart'>Add to Cart</div>
+				</form>
+			</div>
+		</div>
+		<div class="item-card" v-if="metalType === 'gold'">
 			<img :src="products[3].image" alt="" class="item-photo">
 			<div class="item-description">
 				<h3 class="item-name">{{ products[3].name }}</h3>
