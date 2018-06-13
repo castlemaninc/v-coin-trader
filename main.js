@@ -23,7 +23,7 @@ new Vue({
 				weight: '1 oz of Gold',
 				purity: '.9999 FINE GOLD',
 				image: 'https://www.itmtrading.com/content/images/thumbs/0003799_2018-1-oz-american-gold-buffalo_360.png',
-				markup: 1.056,
+				markup: 1.076,
 				numOfEachProduct: 0
 			},
 			{
@@ -32,7 +32,7 @@ new Vue({
 				weight: '1 oz of Gold',
 				purity: '.9999 FINE GOLD',
 				image: 'https://www.itmtrading.com/content/images/thumbs/0003737_2018-1-oz-austrian-gold-philharmonic_360.jpeg',
-				markup: 1.051,
+				markup: 1.091,
 				numOfEachProduct: 0
 			},
 			{
@@ -41,7 +41,7 @@ new Vue({
 				weight: '1 oz of Gold',
 				purity: '.9999 FINE GOLD',
 				image: 'https://www.itmtrading.com/content/images/thumbs/0003749_2018-1-oz-great-britain-gold-britannia_360.png',
-				markup: 1.047,
+				markup: 1.071,
 				numOfEachProduct: 0
 			},
 			{
