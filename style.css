@@ -19,6 +19,26 @@ nav {
 	padding-right: 40px;
 }
 
+.metalNews {
+	display: flex;
+}
+
+.gold-indicator {
+	height: 15px;
+	width: 15px;
+	margin-right: 15px;
+	border-radius: 50%;
+	background: #fbbd08;
+}
+
+.silver-indicator {
+	height: 15px;
+	width: 15px;
+	margin-right: 15px;
+	border-radius: 50%;
+	background: #767676;
+}
+
 .toggle {
 	display: flex;
 	margin-top: 1em;	

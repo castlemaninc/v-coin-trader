@@ -14,10 +14,14 @@
 <div id="app">
 
 	<nav>
-		<div v-if="metalType === 'gold'">
+		
+		
+		<div class="metalNews" v-if="metalType === 'gold'">
+			<div class="gold-indicator"></div>
 			GOLD: ${{ goldSpot.toFixed(2) }} Change: {{percentageChange }}%
 		</div>
-		<div v-if="metalType === 'silver'">
+		<div class="metalNews" v-if="metalType === 'silver'">
+			<div class="silver-indicator"></div>
 			SILVER: ${{ silverSpot.toFixed(2) }} Change: {{percentageChange }}%
 		</div>
 		<div><p>Cart({{ cart }})</p></div>
