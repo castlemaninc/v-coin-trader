@@ -53,7 +53,7 @@
 				<small class="item-purity">{{ products[1].purity }}</small>
 				<h1 class="item-price">${{(goldSpot * products[1].markup).toFixed(2) }}</h1>
 				<form class="add-items">
-					<input type="number" min="0" size="2" placeholder="0" class="item-number" v-model="numItems">
+					<input type="number" min="0" size="2" placeholder="0" class="item-number" v-model.number="products[1].numOfEachProduct">
 					<div class="add-to-cart button" v-on:click='addToCart(1)'>Add to Cart</div>
 				</form>
 			</div>
@@ -66,8 +66,8 @@
 				<small class="item-purity">{{ products[2].purity }}</small>
 				<h1 class="item-price">${{(goldSpot * products[2].markup).toFixed(2) }}</h1>
 				<form class="add-items">
-					<input type="number" min="0" size="2" placeholder="0" class="item-number" v-model="numItems">
-					<div class="add-to-cart button" v-on:click='addToCart'>Add to Cart</div>
+					<input type="number" min="0" size="2" placeholder="0" class="item-number" v-model.number="products[2].numOfEachProduct">
+					<div class="add-to-cart button" v-on:click='addToCart(2)'>Add to Cart</div>
 				</form>
 			</div>
 		</div>
@@ -79,8 +79,8 @@
 				<small class="item-purity">{{ products[3].purity }}</small>
 				<h1 class="item-price">${{(goldSpot * products[3].markup).toFixed(2) }}</h1>
 				<form class="add-items">
-					<input type="number" min="0" size="2" placeholder="0" class="item-number" v-model="numItems">
-					<div class="add-to-cart button" v-on:click='addToCart'>Add to Cart</div>
+					<input type="number" min="0" size="2" placeholder="0" class="item-number" v-model.number="products[3].numOfEachProduct">
+					<div class="add-to-cart button" v-on:click='addToCart(3)'>Add to Cart</div>
 				</form>
 			</div>
 		</div>
@@ -92,8 +92,8 @@
 				<small class="item-purity">{{ products[4].purity }}</small>
 				<h1 class="item-price">${{(silverSpot * products[4].markup).toFixed(2) }}</h1>
 				<form class="add-items">
-					<input type="number" min="0" size="2" placeholder="0" class="item-number" v-model="numItems">
-					<div class="add-to-cart button" v-on:click='addToCart'>Add to Cart</div>
+					<input type="number" min="0" size="2" placeholder="0" class="item-number" v-model.number="products[4].numOfEachProduct">
+					<div class="add-to-cart button" v-on:click='addToCart(4)'>Add to Cart</div>
 				</form>
 			</div>
 		</div>		
@@ -105,8 +105,8 @@
 				<small class="item-purity">{{ products[5].purity }}</small>
 				<h1 class="item-price">${{(silverSpot * products[5].markup).toFixed(2) }}</h1>
 				<form class="add-items">
-					<input type="number" min="0" size="2" placeholder="0" class="item-number" v-model="numItems">
-					<div class="add-to-cart button" v-on:click='addToCart'>Add to Cart</div>
+					<input type="number" min="0" size="2" placeholder="0" class="item-number" v-model.number="products[5].numOfEachProduct">
+					<div class="add-to-cart button" v-on:click='addToCart(5)'>Add to Cart</div>
 				</form>
 			</div>
 		</div>
@@ -118,8 +118,8 @@
 				<small class="item-purity">{{ products[6].purity }}</small>
 				<h1 class="item-price">${{(silverSpot * products[6].markup).toFixed(2) }}</h1>
 				<form class="add-items">
-					<input type="number" min="0" size="2" placeholder="0" class="item-number" v-model="numItems">
-					<div class="add-to-cart button" v-on:click='addToCart'>Add to Cart</div>
+					<input type="number" min="0" size="2" placeholder="0" class="item-number" v-model.number="products[6].numOfEachProduct">
+					<div class="add-to-cart button" v-on:click='addToCart(6)'>Add to Cart</div>
 				</form>
 			</div>
 		</div>
@@ -131,8 +131,8 @@
 				<small class="item-purity">{{ products[7].purity }}</small>
 				<h1 class="item-price">${{(silverSpot * products[7].markup).toFixed(2) }}</h1>
 				<form class="add-items">
-					<input type="number" min="0" size="2" placeholder="0" class="item-number" v-model="numItems">
-					<div class="add-to-cart button" v-on:click='addToCart'>Add to Cart</div>
+					<input type="number" min="0" size="2" placeholder="0" class="item-number" v-model.number="products[7].numOfEachProduct">
+					<div class="add-to-cart button" v-on:click='addToCart(7)'>Add to Cart</div>
 				</form>
 			</div>
 		</div>
