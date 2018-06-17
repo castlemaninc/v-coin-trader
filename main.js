@@ -85,6 +85,7 @@ new Vue({
 
 	methods: {
 		addToCart(index) {
+			// this is a new change
 			this.cart += this.products[index].numOfEachProduct;
 			this.products[index].numOfEachProduct = 0;
 		},
