@@ -13,7 +13,7 @@ new Vue({
 				name: '2018 American Eagle',
 				weight: '1 oz of Gold',
 				purity: '.9167 FINE GOLD',
-				image: 'https://www.itmtrading.com/content/images/thumbs/0003733_2018-1-oz-american-gold-eagle_360.png',
+				image: './assets/2018-1-oz-american-gold-eagle_360.png',
 				markup: 1.045,
 				numOfEachProduct: 0
 			},
@@ -22,7 +22,7 @@ new Vue({
 				name: '2018 American Gold Buffalo',
 				weight: '1 oz of Gold',
 				purity: '.9999 FINE GOLD',
-				image: 'https://www.itmtrading.com/content/images/thumbs/0003799_2018-1-oz-american-gold-buffalo_360.png',
+				image: './assets/2018-1-oz-american-gold-buffalo_360.png',
 				markup: 1.076,
 				numOfEachProduct: 0
 			},
@@ -31,7 +31,7 @@ new Vue({
 				name: '2018 Austrian Gold Philharmonic',
 				weight: '1 oz of Gold',
 				purity: '.9999 FINE GOLD',
-				image: 'https://www.itmtrading.com/content/images/thumbs/0003737_2018-1-oz-austrian-gold-philharmonic_360.jpeg',
+				image: './assets/2018-1-oz-austrian-gold-philharmonic_360.jpeg',
 				markup: 1.091,
 				numOfEachProduct: 0
 			},
@@ -40,7 +40,7 @@ new Vue({
 				name: '2018 Great Britain Gold Brittania',
 				weight: '1 oz of Gold',
 				purity: '.9999 FINE GOLD',
-				image: 'https://www.itmtrading.com/content/images/thumbs/0003749_2018-1-oz-great-britain-gold-britannia_360.png',
+				image: './assets/2018-1-oz-great-britain-gold-britannia_360.png',
 				markup: 1.071,
 				numOfEachProduct: 0
 			},
@@ -84,9 +84,9 @@ new Vue({
 	},
 
 	methods: {
-		addToCart() {
-			this.cart += parseInt(this.numItems);
-			this.numItems = 0; 
+		addToCart(index) {
+			this.cart += this.products[index].numOfEachProduct;
+			this.products[index].numOfEachProduct = 0;
 		},
 
 		selectGold() {
