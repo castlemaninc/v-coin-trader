@@ -1,1 +1,46 @@
-test
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<title>V Coin Trader</title>
+
+</head>
+
+<body>
+
+<div id="app">
+
+	<nav>		
+		
+		<div class="metalNews" v-if="metalType === 'gold'">
+			<div class="gold-indicator"></div>
+			GOLD: ${{ goldSpot.toFixed(2) }} Change: {{percentageChange }}%
+		</div>
+		<div class="metalNews" v-if="metalType === 'silver'">
+			<div class="silver-indicator"></div>
+			SILVER: ${{ silverSpot.toFixed(2) }} Change: {{percentageChange }}%
+		</div>
+		<div><p>Cart({{ cart }})</p></div>
+	</nav>
+	<section>
+		<div class="toggle">
+			<div class="gold-button button" v-on:click='selectGold'>Buy Gold</div>
+			<div class="silver-button button" v-on:click='selectSilver'>Buy Silver</div>
+		</div>
+		<div class="item-container">
+			<coin-card v-for="product in products" v-bind:coin="product">
+				
+			</coin-card>
+		</div>	
+	</section>	
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="main2.js"></script>
+</body>
+</html>
