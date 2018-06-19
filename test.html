@@ -27,13 +27,11 @@
 	</nav>
 	<section>
 		<div class="toggle">
-			<div class="gold-button button" v-on:click='selectGold'>Buy Gold</div>
-			<div class="silver-button button" v-on:click='selectSilver'>Buy Silver</div>
+			<div class="gold-button button" v-on:click='toggleMetalType'>Buy Gold</div>
+			<div class="silver-button button" v-on:click='toggleMetalType'>Buy Silver</div>
 		</div>
 		<div class="item-container">
-			<coin-card v-for="product in products" v-bind:coin="product">
-				
-			</coin-card>
+			<coin-card v-for="product in products" v-bind:coin="product" :key="product.productId"></coin-card>
 		</div>	
 	</section>	
 </div>
